@@ -1,11 +1,12 @@
 extends KinematicBody2D
 
 
-var speed = 200
+var speed = 500
 var friction = 75
 var acceleration = 100
 var velocity = Vector2.ZERO
 var bullet = preload("res://actors/bullet.tscn")
+var bullet_speed = 700
 
 func _ready() -> void:
 	pass 
@@ -34,6 +35,7 @@ func fire():
 	var bullet_instance = bullet.instance()
 	bullet_instance.initialize( get_global_position(), rotation_degrees)
 	get_parent().add_child(bullet_instance)
+	bullet_instance.apply_impulse(Vector2(), Vector2(bullet_speed, 0).rotated(rotation))
 
 
 
