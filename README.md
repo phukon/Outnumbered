@@ -1,6 +1,6 @@
 # Outnumbered
-2D Top-down shooter
+A 2D Top-down shooter made with the Godot(http://www.godotengine.org)game engine.
 
 ![](images/ICON.jpg)
 
- A 2D PLATFORMER GAME MADE WITH THE Godot(http://www.godotengine.org) GAME ENGINE.
+ 
