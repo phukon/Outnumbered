@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://actors/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scripts/hud.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.384314, 0.384314, 0.384314, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="world" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 280.803, 93.4436 )
+
+[node name="hud" type="CanvasLayer" parent="."]
+script = ExtResource( 2 )
+
+[node name="Panel" type="Panel" parent="hud"]
+margin_left = 23.0
+margin_top = 240.0
+margin_right = 172.0
+margin_bottom = 294.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="memory" type="Label" parent="hud"]
+margin_left = 33.0
+margin_top = 270.0
+margin_right = 159.0
+margin_bottom = 284.0
+text = "memory"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fps" type="Label" parent="hud"]
+margin_left = 33.0
+margin_top = 244.0
+margin_right = 165.0
+margin_bottom = 258.0
+text = "fps"
+__meta__ = {
+"_edit_use_anchors_": false
+}
