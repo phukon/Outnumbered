@@ -38,11 +38,9 @@ func fire():
 	bullet_instance.apply_impulse(Vector2(), Vector2(bullet_speed, 0).rotated(rotation))
 
 
+func kill():
+	get_tree().reload_current_scene()
 
-
-
-
-
-
-
-
+func _on_hitbox_body_entered(body: Node) -> void:
+	if "enemy" in body.name:
+		kill()
